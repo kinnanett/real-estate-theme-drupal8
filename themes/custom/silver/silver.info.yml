@@ -1,0 +1,20 @@
+name: silver
+type: theme
+description: 'Clean theme for drupal 8'
+core: 8.x
+libraries:
+  - silver/global-styles
+  - silver/swiper
+  - silver/custom
+
+
+
+regions:
+  # header: Header
+  navigation: 'Nav'
+  hero: 'Hero image'
+  content: Content
+  main_bottom: 'Main bottom'
+  footer_top: 'footer top'
+  secondary_menu: 'secondary_menu'
+  copyright: 'copyright'

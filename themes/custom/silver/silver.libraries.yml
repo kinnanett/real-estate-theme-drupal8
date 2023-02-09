@@ -1,0 +1,27 @@
+global-styles:
+  version: 3.x
+  css:
+    theme:
+      css/styles.css: {}
+  js: prueba/javascripts/bootstrap.min.js: {}
+
+ # styles and scripts for swiper plugin
+swiper:
+  css:
+    theme:
+      js/Swiper-3.3.1/dist/css/swiper.min.css: {}
+  js:
+    js/Swiper-3.3.1/dist/js/swiper.min.js: {}
+
+  dependencies:
+      - core/jquery
+
+
+custom:
+  css:
+    theme:
+      css/custom.css: {}
+
+  js:
+    js/custom.js: {}
+

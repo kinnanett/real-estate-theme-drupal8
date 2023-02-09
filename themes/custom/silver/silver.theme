@@ -1,0 +1,27 @@
+<?php
+/**
+* hook_views_pre_view
+* @param type $view
+* @param type $display_id
+* @param type $args
+*/
+function silver_views_pre_view(&$view, &$display_id, &$args) {
+if ($view->name == 'preview_properties') {
+$filters = $view->display_handler->get_option('filters');
+$view->display_handler->override_option('filters', $filters);
+}
+}
+
+
+
+/**
+* hook__views_pre_build
+* @param type $view
+* @return type
+*/
+function silver_views_pre_build($view) {
+if ($view->name=='preview_properties') {
+$view->display['page']->handler->handlers['filter']['filter_field']->value['value'] = 8;
+return $view;
+}
+}

@@ -1,0 +1,454 @@
+/*----------------------------------------------------------------
+       ***********  C U S T O M  S T Y L E S *********
+ -----------------------------------------------------------------*/
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+#off-canvas {
+  .nav-pills {
+    display: none;
+  }
+}
+/*------------------ N A V I G A T I O N -------------------------*/
+.nav > li > a {
+    padding: 7px 15px;
+}
+
+.icon-mobile-menu,
+.fa-times {
+  display: none;
+}
+
+.intro-title-container {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  h2 {
+    background: rgba(77, 85, 91, 0.78);
+    color: white;
+    font-size: 3.6rem;
+    font-weight: lighter;
+    margin: 0px auto;
+    padding: 1%;
+  }
+}
+
+//first line of text intro
+.first-line {
+  width: 40%;
+}
+
+//second line of text intro
+.second-line {
+  width: 50%;
+}
+
+.helper-margin {
+  margin: 20px;
+}
+
+.nav-pills {
+  a {
+    color: $gray-light;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0) !important;
+      border-radius: 0;
+      border: solid 2px $brand-primary;
+      color: $brand-primary;
+      padding: 5px 13px;
+
+    }
+    &:active {
+      background-color: rgba(255, 255, 255, 0) !important;
+      color: $brand-primary;
+      border-radius: 0;
+      border: solid 2px $brand-primary;
+    }
+  }
+}
+
+//CONTAINER FOR NAVIGATION
+.background-nav {
+  background-color: rgba(70, 80, 87, 0.8);
+  position: fixed;
+  z-index: 2;
+}
+
+//BRAND BLOCK
+#block-silver-branding {
+  display: inline-block;
+  margin: 3% 0;
+  width: 33.33333333%;
+  float: left;
+}
+
+//MENU BLOCK
+#block-silver-main-menu {
+  display: inline-block;
+  margin: 3% 0;
+}
+
+
+//CONTAINER FOR MOBILE NAV HIDDEN
+#site-menu {
+  display: inline;
+}
+
+/*------------------ M E D I A  Q U E R I E S -------------------------*/
+
+@media (max-width: 768px){
+
+  .nav-pills {
+    li {
+      display: block;
+      float: none;
+      padding: 5% 0;
+    }
+  }
+
+  .fa-times {
+    color: #fff;
+    display: inline;
+  }
+
+  .icon-mobile-menu {
+    color: #fff;
+    display: inline;
+    vertical-align: middle;
+    }
+
+  #block-silver-main-menu {
+    width: 100%;
+  }
+
+  #block-silver-branding {
+    width: 100%;
+  }
+
+  #site-wrapper {
+    background: #428bca;
+    height: auto; /* Temp: Simulates a tall page. */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  #site-canvas {
+    height: 100%;
+    position: relative;
+    width: 100%;
+
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    -webkit-transition: 300ms ease all;
+    transition: 300ms ease all;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    //padding: 5% 0; /* Temp: Just spacing. */
+  }
+
+  .show-nav #site-canvas {
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
+
+    -webkit-transform: translate3d(300px, 0, 0);
+    transform: translate3d(300px, 0, 0);
+  }
+
+  #site-menu {
+    background: #428bca;
+    height: 100%;
+    left: -300px;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    width: 300px;
+  }
+  /* Just styles... Not relevant to demo */
+
+  #big-sexy {
+    display: block;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 0 auto;
+    width: 300px;
+  }
+}
+
+
+/*------------------ S O C I A L   M E D I A  -------------------------*/
+.tweet-container {
+  padding-left: 0;
+}
+#block-twitter {
+  background: rgb(71, 201, 253) none repeat scroll 0% 0%;
+  padding: 2%;
+  height: 300px;
+  h2 {
+    color: white;
+    font-weight: 300;
+    font-size: 3rem;
+    margin-bottom: 3%;
+    &::after {
+      background: #fff;
+      content: " ";
+      display: block;
+      height: 3px;
+      margin-top: 5px;
+      width: 50px;
+    }
+  }
+  img {
+    width: 32px;
+  }
+  p {
+    color: white;
+    font-size: 2rem;
+    margin: 1% 0;
+    @media screen and (max-width: 768px){
+      margin: 6% 0;
+    }
+  }
+}
+
+
+/*------------------ T E S T I M O N I A L S  -------------------------*/
+
+#block-views-block-testimonials-slider-block-1 {
+  background: #fff;
+  height: auto;
+  p,h2 {
+    color: $gray-darker;
+  }
+  img {
+    @media screen and (max-width: 768px) {
+      display: none;
+      }
+    }
+  .swiper-slide {
+    margin: 35px 0;
+    text-align: left;
+  }
+}
+
+.testimonials-person-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 0;
+    text-align: left;
+  }
+
+.text {
+  padding-left: 0;
+}
+
+.testimonials-main-title {
+  font-weight: 300;
+  margin-top:  6%;
+  &::after {
+    background: $gray-darker;
+    content: " ";
+    display: block;
+    height: 3px;
+    margin-top: 5px;
+    width: 50px;
+  }
+}
+
+
+/*------------------  V I D E O  S E C T I O N   -------------------------*/
+
+.video-section-container {
+  background-color: $gray-darker;
+  padding: 6% 0;
+}
+
+.best-property-title-container {
+  float: none;
+  padding-left: 0;
+}
+#block-segundaprueba {
+  h2 {
+    color: #fff;
+    font-weight: 300;
+    &::after {
+      background: #fff;
+      content: " ";
+      display: block;
+      height: 3px;
+      margin-top: 5px;
+      margin-bottom: 40px;
+      width: 50px;
+    }
+  }
+  p {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 2.2% 0;
+  }
+}
+
+.video-wrapper {
+  height: 300px;
+  margin-top: -7%;
+  @media screen and (max-width: 768px){
+    margin: 5% 0px;
+  }
+  iframe {
+    height: 100%;
+    width: 100%;
+    @media screen and (max-width: 768px){
+      height: 100%;
+    }
+  }
+}
+
+.text-intro-video {
+  padding-left: 0;
+  @media screen and (max-width: 768px){
+    padding: 2%;
+  }
+  a {
+    border: solid 2px #353f46;
+    color: #353f46;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 3% 6%;
+    text-transform: uppercase;
+    &:hover {
+      border: solid 2px $brand-primary;
+      color: $brand-primary;
+      text-decoration: none; 
+    }
+  }
+}
+
+/*--------------   S E R V I C E S   S E C T I O N   --------------------*/
+
+.services-container {
+  background-color: rgb(71, 201, 253);
+  padding: 2.7% 0;
+
+  .service-item-title {
+    color: #fff;
+     font-size: 2.5rem;
+  }
+  p {
+    color: #fff;
+    font-size: 12px;
+    margin: 11% 0;
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+      margin: 5% 0;
+      }
+    }
+}
+
+.services-main-title {
+  color: #fff;
+  font-weight: 300;
+  &::after {
+    background: #fff;
+    content: " ";
+    display: block;
+    height: 3px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    width: 50px;
+  }
+}
+
+/*------------------  A B O U T US  S E C T I O N    -------------------------*/
+
+
+#block-whoirblueasy {
+  background: url("../imgs/about_us.jpg");
+  background-size: cover;
+  height: 500px;
+  h2 {
+    color: #fff;
+    font-weight: 300;
+    margin-top: 100px;
+    &::after {
+      background: #fff;
+      content: " ";
+      display: block;
+      height: 3px;
+      margin-top: 5px;
+      margin-bottom: 40px;
+      width: 50px;
+    }
+  }
+  p {
+    color: #fff;
+  }
+}
+
+.fa-facebook-official,
+.fa-dribbble,
+.fa-google-plus {
+  color: white;
+  margin-right: 3rem;
+  margin-top: 2rem;
+}
+.top-text-social-icons {
+  float: none;
+}
+
+/*------------------  F O O T E R  S E C T I O N   -------------------------*/
+
+footer {
+  background: $gray-darker;
+  padding: 3% 0px;
+  h5 {
+    color: #6f787e;
+    text-align: right;
+    @media screen and (max-width: 768px) {
+      margin: 0;
+      vertical-align: top;
+    }
+    @media screen and (max-width: 360px) {
+      text-align: center;
+      margin: 4% 0;
+    }
+  }
+  ul {
+    padding-left: 0 ;
+    li {
+      display: inline-block;
+      list-style: none;
+      &:last-child {
+        border: none;
+      }
+      a {
+        border-right: solid 2px #6f787e;
+        color: #6f787e;
+        padding: 0 15px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+//container for footer menu
+.footer-menu-container {
+  padding-left: 0;
+  @media screen and (max-width: 360px) {
+    margin: 4% 0;
+  }
+}
